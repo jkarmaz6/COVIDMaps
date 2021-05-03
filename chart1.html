@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="Zips.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+           ['fully',	'sample ZIP'],
+[2026,	0],
+[9270,	39],
+[11032,	0],
+[4256,	0],
+[5215,	18],
+[11508,	145],
+[6686,	74],
+[8037,	196],
+[6515,	142],
+[2597,	34],
+[6563,	131],
+[9268,	108],
+[6387,	51],
+[4653,	32],
+[4684,	61],
+[8472,	75],
+[6968,	29],
+[2905,	127],
+[1208,	0],
+[7749,	53],
+[2669,	12],
+[8099,	31],
+[7075,	157],
+[4536,	66],
+[3108,	44],
+[7788,	65],
+[4884,	40],
+[5870,	111],
+[1529,	14],
+[5103,	69],
+[6572,	104],
+[7142,	112],
+[4444,	74],
+[3271,	46],
+[11896,	97],
+[7641,	154],
+[10631,	81],
+[11448,	46],
+[12119,	43],
+[12491,	122],
+[8793,	65],
+[4917,	55],
+[4737,	52],
+[7216,	170],
+[2164,	22],
+[6816,	67]
+
+        ]);
+
+    
+    
+    
+    
+    
+    
+        var options = {
+          title: 'Covid Deaths vs Fully Vaccinated Persons',
+          hAxis: {title: 'Fully Vacinnated', minValue: 0, maxValue: 15},
+          vAxis: {title: 'Covid Deaths', minValue: 0, maxValue: 15},
+          legend: 'none'
+        };
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
